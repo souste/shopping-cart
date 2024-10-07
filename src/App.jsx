@@ -5,7 +5,6 @@ import NavBar from "./components/NavBar";
 function App() {
   return (
     <div>
-      <h1>Shopping Cart</h1>
       <NavBar />
       <HomePage />
       <ShopPage />
