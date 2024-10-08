@@ -1,13 +1,20 @@
-import HomePage from "./components/HomePage";
-import ShopPage from "./components/ShopPage";
-import NavBar from "./components/NavBar";
+import Home from "./pages/Home";
+import Shop from "./pages/Shop";
+import NavBar from "./NavBar";
+import About from "./pages/About";
+import { Route, Routes } from "react-router-dom";
 
 function App() {
   return (
     <div>
       <NavBar />
-      <HomePage />
-      <ShopPage />
+      <div className="container">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/shop" element={<Shop />} />
+          <Route path="/about" element={<About />} />
+        </Routes>
+      </div>
     </div>
   );
 }
