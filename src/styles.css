@@ -1,3 +1,5 @@
+/* NavBar */
+
 .nav {
   display: flex;
   justify-content: space-between;
@@ -5,6 +7,7 @@
   gap: 2rem;
   padding: 0.1rem;
   border: 2px solid black;
+  width: 100vw;
 }
 
 .site-title {
@@ -17,6 +20,7 @@
   display: flex;
   list-style: none;
   gap: 1rem;
+  margin-right: 100px;
 }
 
 .nav a {
@@ -34,4 +38,29 @@ nav li.active {
 
 .nav li:hover {
   background-color: red;
+}
+
+/* Home Page  */
+
+.home-container {
+  height: 100vw;
+  border: 2px solid red;
+  justify-content: center;
+}
+
+/* Shop Page */
+
+.shop-container {
+  height: 100vw;
+}
+
+/* About Page */
+
+.about-container {
+  height: 100vw;
+}
+
+.about-text {
+  margin-left: 100px;
+  margin-right: 100px;
 }
