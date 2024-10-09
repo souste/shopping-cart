@@ -1,6 +1,14 @@
+import { useEffect, useState } from "react";
 import "../styles.css";
 
 function ShopPage() {
+  // const [product, setProduct] = useState([]);
+  // const [loading, setLoading] = useState(true);
+
+  // useEffect(()=> {
+  //   fetch
+  // })
+
   return (
     <div className="shop-container">
       <h1>Shop</h1>
