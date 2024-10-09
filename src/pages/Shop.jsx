@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import "../styles.css";
 import getProducts from "../api";
+import { Link } from "react-router-dom";
 
 function ShopPage() {
   const [products, setProducts] = useState([]);
@@ -23,14 +24,16 @@ function ShopPage() {
       <ul className="products-container">
         {products.map((product) => {
           return (
-            <li className="product-container" key={product.id}>
-              <img src={product.image} alt={product.title} />
-              <h3 className="products-title">
-                {product.title.length > 65 ? `${product.title.substring(0, 65)}...` : product.title}
-              </h3>
-              <p>Category: {product.category}</p>
-              <p>£{product.price}</p>
-            </li>
+            <Link key={product.id} to={`/products/${product.id}`}>
+              <li className="product-container" key={product.id}>
+                <img src={product.image} alt={product.title} />
+                <h3 className="products-title">
+                  {product.title.length > 65 ? `${product.title.substring(0, 65)}...` : product.title}
+                </h3>
+                <p>Category: {product.category}</p>
+                <p>£{product.price}</p>
+              </li>
+            </Link>
           );
         })}
       </ul>
