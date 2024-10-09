@@ -18,14 +18,17 @@ function ShopPage() {
 
   return (
     <div className="shop-container">
-      <h1>Shop</h1>
+      <h1 className="shop-title">Shop</h1>
 
       <ul className="products-container">
         {products.map((product) => {
           return (
             <li className="product-container" key={product.id}>
-              <h3>{product.title}</h3>
               <img src={product.image} alt={product.title} />
+              <h3 className="products-title">
+                {product.title.length > 65 ? `${product.title.substring(0, 65)}...` : product.title}
+              </h3>
+              <p>Category: {product.category}</p>
               <p>£{product.price}</p>
             </li>
           );
