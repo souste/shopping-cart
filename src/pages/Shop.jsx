@@ -1,18 +1,36 @@
 import { useEffect, useState } from "react";
 import "../styles.css";
+import getProducts from "../api";
 
 function ShopPage() {
-  // const [product, setProduct] = useState([]);
-  // const [loading, setLoading] = useState(true);
+  const [products, setProducts] = useState([]);
+  const [loading, setLoading] = useState(true);
 
-  // useEffect(()=> {
-  //   fetch
-  // })
+  useEffect(() => {
+    getProducts().then((products) => {
+      setProducts(products);
+      setLoading(false);
+    });
+  }, []);
+
+  if (loading) return <p>Loading...</p>;
+  // should I add an error here?
 
   return (
     <div className="shop-container">
       <h1>Shop</h1>
-      <p>Need to figure out what the API is that I am going to use. Should I specialise in something random??</p>
+
+      <ul className="products-container">
+        {products.map((product) => {
+          return (
+            <li className="product-container" key={product.id}>
+              <h3>{product.title}</h3>
+              <img src={product.image} alt={product.title} />
+              <p>£{product.price}</p>
+            </li>
+          );
+        })}
+      </ul>
     </div>
   );
 }

@@ -3,9 +3,6 @@ import Shop from "./pages/Shop";
 import NavBar from "./NavBar";
 import About from "./pages/About";
 import { Route, Routes } from "react-router-dom";
-import getProducts from "./api";
-
-getProducts();
 
 function App() {
   return (
