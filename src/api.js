@@ -30,6 +30,4 @@ async function getSingleProduct(productId) {
   }
 }
 
-getSingleProduct();
-
-export default getProducts;
+export { getProducts, getSingleProduct };

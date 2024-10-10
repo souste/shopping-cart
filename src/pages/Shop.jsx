@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import "../styles.css";
-import getProducts from "../api";
+import { getProducts } from "../api";
 import { Link } from "react-router-dom";
 
 function ShopPage() {
