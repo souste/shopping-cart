@@ -96,6 +96,22 @@ nav li.active {
   padding-right: 5%;
 }
 
+/* Single Product */
+
+.single-product-container {
+  padding-top: 100px;
+  list-style: none;
+  display: flex;
+  margin-left: 20vw;
+  margin-right: 20vw;
+  gap: 3vw;
+}
+
+.single-product-container > img {
+  height: 25vw;
+  width: 25vw;
+}
+
 /* About Page */
 
 .about-container {

@@ -6,19 +6,30 @@ import { getSingleProduct } from "./api";
 function SingleProduct() {
   const { productId } = useParams();
   const [product, setProduct] = useState({});
-  // check if I can add setLoading to dependency array
+  const [loading, setLoading] = useState(true);
+  // Need to centre loading text
 
   useEffect(() => {
     getSingleProduct(productId).then((product) => {
       setProduct(product);
+      setLoading(false);
     });
   }, [productId]);
 
+  if (loading) return <p>Loading...</p>;
+
   return (
     <div>
-      <ul>
-        <li>{product.title}</li>
-      </ul>
+      <li className="single-product-container">
+        <img src={product.image} alt={product.title} />
+        <div className="single-product-information">
+          <h3>{product.title}</h3>
+          <p>{product.description}</p>
+          <p>Category: {product.category}</p>
+          <p>£{product.price}</p>
+          <button>Add to Cart</button>
+        </div>
+      </li>
     </div>
   );
 }
