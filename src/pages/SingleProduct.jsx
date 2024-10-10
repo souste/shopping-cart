@@ -1,7 +1,7 @@
-import "./styles.css";
+import "../styles.css";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
-import { getSingleProduct } from "./api";
+import { getSingleProduct } from "../api";
 
 function SingleProduct() {
   const { productId } = useParams();

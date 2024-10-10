@@ -2,7 +2,7 @@ import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import NavBar from "./NavBar";
 import About from "./pages/About";
-import SingleProduct from "./SingleProduct.jsx";
+import SingleProduct from "./pages/SingleProduct.jsx";
 import { Route, Routes } from "react-router-dom";
 
 function App() {
