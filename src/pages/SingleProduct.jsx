@@ -7,7 +7,18 @@ function SingleProduct() {
   const { productId } = useParams();
   const [product, setProduct] = useState({});
   const [loading, setLoading] = useState(true);
+  const [count, setCount] = useState(1);
   // Need to centre loading text
+
+  const handleMinusClick = () => {
+    if (count >= 1) {
+      setCount(count - 1);
+    }
+  };
+
+  const handlePlusClick = () => {
+    setCount(count + 1);
+  };
 
   useEffect(() => {
     getSingleProduct(productId).then((product) => {
@@ -26,6 +37,11 @@ function SingleProduct() {
           <h3>{product.title}</h3>
           <p>{product.description}</p>
           <p>Category: {product.category}</p>
+          <div className="quantity-increment">
+            <button onClick={handleMinusClick}>-</button>
+            <p>{count}</p>
+            <button onClick={handlePlusClick}>+</button>
+          </div>
           <p>£{product.price}</p>
           <button>Add to Cart</button>
         </div>

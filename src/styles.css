@@ -112,6 +112,11 @@ nav li.active {
   width: 25vw;
 }
 
+.quantity-increment {
+  display: flex;
+  gap: 1vw;
+}
+
 /* About Page */
 
 .about-container {
