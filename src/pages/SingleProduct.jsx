@@ -20,6 +20,10 @@ function SingleProduct() {
     setCount(count + 1);
   };
 
+  const handleCartClick = () => {
+    console.log("I'm being added to the card");
+  };
+
   useEffect(() => {
     getSingleProduct(productId).then((product) => {
       setProduct(product);
@@ -34,16 +38,22 @@ function SingleProduct() {
       <li className="single-product-container">
         <img src={product.image} alt={product.title} />
         <div className="single-product-information">
-          <h3>{product.title}</h3>
+          <h3 className="single-product-title">{product.title}</h3>
           <p>{product.description}</p>
           <p>Category: {product.category}</p>
           <div className="quantity-increment">
-            <button onClick={handleMinusClick}>-</button>
+            <button className="increment-button" onClick={handleMinusClick}>
+              -
+            </button>
             <p>{count}</p>
-            <button onClick={handlePlusClick}>+</button>
+            <button className="increment-button" onClick={handlePlusClick}>
+              +
+            </button>
           </div>
-          <p>£{product.price}</p>
-          <button>Add to Cart</button>
+          <p className="single-product-price">£{product.price}</p>
+          <button className="addtocart-button" onClick={handleCartClick}>
+            Add to Cart
+          </button>
         </div>
       </li>
     </div>

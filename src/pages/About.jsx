@@ -3,7 +3,7 @@ import "../styles.css";
 function About() {
   return (
     <div className="about-container">
-      <h1>About</h1>
+      <h1 className="about-title">About</h1>
       <p className="about-text">
         Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
         aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo

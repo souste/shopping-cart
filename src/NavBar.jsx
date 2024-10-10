@@ -1,6 +1,5 @@
 import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import "./styles.css";
-import { useImperativeHandle } from "react";
 
 function NavBar() {
   return (
@@ -11,6 +10,7 @@ function NavBar() {
       <ul>
         <CustomLink to="/shop">Shop</CustomLink>
         <CustomLink to="/about">About</CustomLink>
+        <CustomLink to="/cart">Cart</CustomLink>
       </ul>
     </nav>
   );
