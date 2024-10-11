@@ -1,11 +1,18 @@
 import "../styles.css";
+import homePageTv from "../assets/home-page-tv.jpg";
 
 function Home() {
   return (
     <div className="home-container">
-      <h1>Home</h1>
-      <h2>Sub heading, figure out what to say</h2>
-      <p>The best store in the world blah blah blah - need to figure out what the API should be</p>
+      <div className="home-page-text">
+        <h1>
+          Discover our curated collection products. Each piece is carefully selected for its quality, comfort, and
+          style.
+        </h1>
+        <h2>Quality products, affordable prices, and exceptional service.</h2>
+        <h3>Click HERE for all your shopping needs</h3>
+      </div>
+      <img src={homePageTv} alt="Home page TV" />
     </div>
   );
 }

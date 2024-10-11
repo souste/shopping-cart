@@ -47,11 +47,10 @@ nav li.active {
 /* Home Page  */
 
 .home-container {
-  height: 100vw;
-  width: 100vw;
   padding-top: 4vw;
-  border: 2px solid red;
-  justify-content: center;
+  display: flex;
+  margin-left: 4vw;
+  margin-right: 4vw;[]
 }
 
 /* Shop Page */
@@ -147,6 +146,8 @@ nav li.active {
 .about-container {
   height: 100vw;
   padding-top: 4vw;
+  margin-left: 10vw;
+  margin-right: 10vw
 }
 
 .about-title {
