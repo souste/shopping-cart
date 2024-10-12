@@ -11,9 +11,9 @@ function App() {
   const [quantity, setQuantity] = useState(1);
   const [cart, setCart] = useState([]);
 
-  const handleCartClick = (price, id, image) => {
-    setCart((prevCart) => [...prevCart, { price, id, image, quantity }]);
-    console.log("Updated Cart", cart);
+  const handleCartClick = (title, price, id, image) => {
+    setCart((prevCart) => [...prevCart, { title, price, id, image, quantity }]);
+    setQuantity(1);
   };
 
   useEffect(() => {

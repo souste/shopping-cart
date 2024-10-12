@@ -1,13 +1,9 @@
 import "../styles.css";
-import { useEffect } from "react";
+import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getSingleProduct } from "../api";
 
 function Cart({ cart }) {
-  useEffect(() => {
-    console.log("cartmeal", cart);
-  }, [cart]);
-
   return (
     <div className="cart-container">
       <h1>Your Shopping Cart</h1>
@@ -15,14 +11,15 @@ function Cart({ cart }) {
       <ul>
         {cart.map((product) => {
           return (
-            <li key={product.id}>
-              <p>ID: {product.id}</p>
-              <p>what is going on?</p>
+            <li key={product.id} className="cart-product-container">
+              <img src={product.image} alt="" />
+              <h3>{product.title}</h3>
+              <p>{product.price}</p>
+              <p>{product.quantity}</p>
             </li>
           );
         })}
       </ul>
-      <p>Need to figure outhow to design the cart. Check other websites for ideas</p>
     </div>
   );
 }

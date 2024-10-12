@@ -49,7 +49,7 @@ function SingleProduct({ handleCartClick, quantity, setQuantity }) {
           <p className="single-product-price">£{product.price}</p>
           <button
             className="addtocart-button"
-            onClick={() => handleCartClick(product.price, product.id, product.image)}
+            onClick={() => handleCartClick(product.title, product.price, product.id, product.image)}
           >
             Add to Cart
           </button>
