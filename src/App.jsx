@@ -5,8 +5,21 @@ import About from "./pages/About";
 import Cart from "./pages/Cart.jsx";
 import SingleProduct from "./pages/SingleProduct.jsx";
 import { Route, Routes } from "react-router-dom";
+import { useState, useEffect } from "react";
 
 function App() {
+  const [quantity, setQuantity] = useState(1);
+  const [cart, setCart] = useState([]);
+
+  const handleCartClick = (price, id, image) => {
+    setCart((prevCart) => [...prevCart, { price, id, image, quantity }]);
+    console.log("Updated Cart", cart);
+  };
+
+  useEffect(() => {
+    console.log("cart updated", cart);
+  }, [cart]);
+
   return (
     <div>
       <NavBar />
@@ -15,8 +28,11 @@ function App() {
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />
           <Route path="/about" element={<About />} />
-          <Route path="products/:productId" element={<SingleProduct />} />
-          <Route path="/cart" element={<Cart />} />
+          <Route
+            path="products/:productId"
+            element={<SingleProduct handleCartClick={handleCartClick} quantity={quantity} setQuantity={setQuantity} />}
+          />
+          <Route path="/cart" element={<Cart cart={cart} />} />
         </Routes>
       </div>
     </div>

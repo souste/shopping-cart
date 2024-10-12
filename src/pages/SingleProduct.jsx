@@ -3,25 +3,21 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getSingleProduct } from "../api";
 
-function SingleProduct() {
+function SingleProduct({ handleCartClick, quantity, setQuantity }) {
   const { productId } = useParams();
   const [product, setProduct] = useState({});
   const [loading, setLoading] = useState(true);
-  const [count, setCount] = useState(1);
+
   // Need to centre loading text
 
   const handleMinusClick = () => {
-    if (count >= 1) {
-      setCount(count - 1);
+    if (quantity >= 1) {
+      setQuantity(quantity - 1);
     }
   };
 
   const handlePlusClick = () => {
-    setCount(count + 1);
-  };
-
-  const handleCartClick = () => {
-    console.log("I'm being added to the card");
+    setQuantity(quantity + 1);
   };
 
   useEffect(() => {
@@ -45,13 +41,16 @@ function SingleProduct() {
             <button className="increment-button" onClick={handleMinusClick}>
               -
             </button>
-            <p>{count}</p>
+            <p>{quantity}</p>
             <button className="increment-button" onClick={handlePlusClick}>
               +
             </button>
           </div>
           <p className="single-product-price">£{product.price}</p>
-          <button className="addtocart-button" onClick={handleCartClick}>
+          <button
+            className="addtocart-button"
+            onClick={() => handleCartClick(product.price, product.id, product.image)}
+          >
             Add to Cart
           </button>
         </div>
