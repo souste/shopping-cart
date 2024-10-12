@@ -13,12 +13,16 @@ function Cart({ cart }) {
           return (
             <li key={product.id} className="cart-product-container">
               <img src={product.image} alt="" />
-              <h3>{product.title}</h3>
-              <p>{product.price}</p>
-              <p>{product.quantity}</p>
+              <div>
+                <h3>{product.title}</h3>
+                <p>£{product.price}</p>
+                <p>Quantity: {product.quantity}</p>
+              </div>
+              <p>Subtotal: £{product.price * product.quantity}</p>
             </li>
           );
         })}
+        <p>Total: Need to figure this out</p>
       </ul>
     </div>
   );
