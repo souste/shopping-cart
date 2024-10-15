@@ -18,11 +18,11 @@ function Cart({ cart }) {
                 <p>£{product.price}</p>
                 <p>Quantity: {product.quantity}</p>
               </div>
-              <p>Subtotal: £{product.price * product.quantity}</p>
+              <p className="cart-subtotal">Subtotal: £{product.price * product.quantity}</p>
             </li>
           );
         })}
-        <p>Total: Need to figure this out</p>
+        <p className="cart-total">Total: Need to figure this out</p>
       </ul>
     </div>
   );

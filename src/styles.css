@@ -181,3 +181,11 @@ nav li.active {
   height: 10vw;
   width: 10vw;
 }
+
+.cart-subtotal {
+  font-weight: bold;
+}
+
+.cart-total {
+  font-weight: bold;
+}
