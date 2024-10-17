@@ -6,6 +6,12 @@ import { getSingleProduct } from "../api";
 function Cart({ cart }) {
   const [totalPrice, setTotalPrice] = useState(0);
 
+  const calculateTotalPrice = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+
+  useEffect(() => {
+    setTotalPrice(calculateTotalPrice);
+  }, [cart, calculateTotalPrice]);
+
   return (
     <div className="cart-container">
       <h1>Your Shopping Cart</h1>
@@ -26,7 +32,7 @@ function Cart({ cart }) {
             </li>
           );
         })}
-        <p className="cart-total">Total Price: {totalPrice} </p>
+        <p className="cart-total">Total Price: £{totalPrice} </p>
       </ul>
     </div>
   );
