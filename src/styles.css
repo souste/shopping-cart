@@ -180,6 +180,7 @@ nav li.active {
 .cart-container > ul {
   display: flex;
   flex-direction: column;
+  gap: 3vw;
   
 }
 
@@ -188,14 +189,11 @@ nav li.active {
   display: flex;
   gap: 3vw;
   justify-content: space-between;
+  align-items: center;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 
-.cart-headers {
-  display: flex;
-  font-weight: bold;
-  gap: 5vw;
-  justify-content: space-between;
-}
 
 
 .cart-image {
@@ -208,11 +206,15 @@ nav li.active {
   flex-wrap: wrap;
 }
 
-.cart-increment-button {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  color: white;
-  background-color: black;
-  height: 3vw;
+.cart-product-price, .cart-subtotal {
+  font-size: 20px;
+}
+
+.quantity-increment {
+  display: flex;
+  height: 1vw;
+  width: 3vw;
+  align-items: center;
 }
 
 .cart-subtotal {
@@ -221,6 +223,9 @@ nav li.active {
 
 .cart-total {
   font-weight: bold;
+  font-size: 30px;
+  margin-left: 30vw;
+
 }
 
 .price-quantity-container {

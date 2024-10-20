@@ -15,31 +15,36 @@ function Cart({ cart, quantity, setQuantity }) {
   return (
     <div className="cart-container">
       <h1>Your Shopping Cart</h1>
-      <div className="cart-headers">
-        <p>Item</p>
-        <p>Price</p>
-        <p>Quantity</p>
-        <p>Total</p>
-      </div>
+
       <ul>
         {cart.map((product) => {
           return (
             <li key={product.id} className="cart-product-container">
               <div>
-                <h3 className="cart-product-title">
-                  {product.title.length > 25 ? `${product.title.substring(0, 25)}...` : product.title}
-                </h3>
                 <img className="cart-image" src={product.image} alt="" />
               </div>
-
-              <p className="cart-product-price">£{product.price}</p>
-
-              <div className="quantity-increment">
-                <button className="cart-increment-button">-</button>
-                <p>{product.quantity}</p>
-                <button className="cart-increment-button">+</button>
+              <h3 className="cart-product-title">
+                {product.title.length > 50 ? `${product.title.substring(0, 50)}...` : product.title}
+              </h3>
+              <div>
+                <p className="cart-product-price">Price: £{product.price}</p>
+                <div className="quantity-increment">
+                  <p>Quantity: </p>
+                  <select className="quantity-dropdown">
+                    <option value="1">1</option>
+                    <option value="2">2</option>
+                    <option value="3">3</option>
+                    <option value="4">4</option>
+                    <option value="5">5</option>
+                    <option value="6">6</option>
+                    <option value="7">7</option>
+                    <option value="8">8</option>
+                    <option value="9">9</option>
+                    <option value="10">1</option>
+                  </select>
+                </div>
+                <p className="cart-subtotal">Subtotal: £{product.price * product.quantity}</p>
               </div>
-              <p className="cart-subtotal">£{product.price * product.quantity}</p>
             </li>
           );
         })}
