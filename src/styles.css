@@ -141,6 +141,14 @@ nav li.active {
   background-color: black;
 }
 
+.addtocart-button:hover {
+  transform: scale(1.1);
+}
+
+.increment-button:hover {
+  transform: scale(1.1);
+}
+
 /* About Page */
 
 .about-container {
@@ -219,3 +227,6 @@ nav li.active {
   display: flex;
   gap: 3vw;
 };
+
+
+

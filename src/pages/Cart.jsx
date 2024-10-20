@@ -12,16 +12,6 @@ function Cart({ cart, quantity, setQuantity }) {
     setTotalPrice(calculateTotalPrice);
   }, [cart, calculateTotalPrice]);
 
-  const handleMinusClick = () => {
-    if (quantity >= 1) {
-      setQuantity(quantity - 1);
-    }
-  };
-
-  const handlePlusClick = () => {
-    setQuantity(quantity + 1);
-  };
-
   return (
     <div className="cart-container">
       <h1>Your Shopping Cart</h1>
@@ -45,13 +35,9 @@ function Cart({ cart, quantity, setQuantity }) {
               <p className="cart-product-price">£{product.price}</p>
 
               <div className="quantity-increment">
-                <button className="cart-increment-button" onClick={handleMinusClick}>
-                  -
-                </button>
+                <button className="cart-increment-button">-</button>
                 <p>{product.quantity}</p>
-                <button className="cart-increment-button" onClick={handlePlusClick}>
-                  +
-                </button>
+                <button className="cart-increment-button">+</button>
               </div>
               <p className="cart-subtotal">£{product.price * product.quantity}</p>
             </li>

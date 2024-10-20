@@ -2,6 +2,7 @@ import "../styles.css";
 import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getSingleProduct } from "../api";
+import { Link } from "react-router-dom";
 
 function SingleProduct({ handleCartClick, quantity, setQuantity }) {
   const { productId } = useParams();
@@ -47,12 +48,14 @@ function SingleProduct({ handleCartClick, quantity, setQuantity }) {
             </button>
           </div>
           <p className="single-product-price">£{product.price}</p>
-          <button
-            className="addtocart-button"
-            onClick={() => handleCartClick(product.title, product.price, product.id, product.image)}
-          >
-            Add to Cart
-          </button>
+          <Link to={`/shop`}>
+            <button
+              className="addtocart-button"
+              onClick={() => handleCartClick(product.title, product.price, product.id, product.image)}
+            >
+              Add to Cart
+            </button>
+          </Link>
         </div>
       </li>
     </div>
