@@ -206,7 +206,7 @@ nav li.active {
   flex-wrap: wrap;
 }
 
-.cart-product-price, .cart-subtotal {
+.cart-product-price, .cart-subtotal, .quantity-increment {
   font-size: 20px;
 }
 
@@ -217,6 +217,8 @@ nav li.active {
   align-items: center;
 }
 
+
+
 .cart-subtotal {
   font-weight: bold;
 }
@@ -224,7 +226,7 @@ nav li.active {
 .cart-total {
   font-weight: bold;
   font-size: 30px;
-  margin-left: 30vw;
+  margin-left: 45vw;
 
 }
 

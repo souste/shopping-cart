@@ -3,7 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getSingleProduct } from "../api";
 
-function Cart({ cart, quantity, setQuantity }) {
+function Cart({ cart }) {
   const [totalPrice, setTotalPrice] = useState(0);
 
   const calculateTotalPrice = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
@@ -29,8 +29,8 @@ function Cart({ cart, quantity, setQuantity }) {
               <div>
                 <p className="cart-product-price">Price: £{product.price}</p>
                 <div className="quantity-increment">
-                  <p>Quantity: </p>
-                  <select className="quantity-dropdown">
+                  <p>Qty:</p>
+                  <select defaultValue={product.quantity}>
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
@@ -40,7 +40,7 @@ function Cart({ cart, quantity, setQuantity }) {
                     <option value="7">7</option>
                     <option value="8">8</option>
                     <option value="9">9</option>
-                    <option value="10">1</option>
+                    <option value="10">10</option>
                   </select>
                 </div>
                 <p className="cart-subtotal">Subtotal: £{product.price * product.quantity}</p>

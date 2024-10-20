@@ -32,7 +32,7 @@ function App() {
             path="products/:productId"
             element={<SingleProduct handleCartClick={handleCartClick} quantity={quantity} setQuantity={setQuantity} />}
           />
-          <Route path="/cart" element={<Cart cart={cart} quantity={quantity} setQuantity={setQuantity} />} />
+          <Route path="/cart" element={<Cart cart={cart} />} />
         </Routes>
       </div>
     </div>
