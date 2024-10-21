@@ -2,6 +2,7 @@ import { useEffect, useState } from "react";
 import "../styles.css";
 import { getProducts } from "../api";
 import { Link } from "react-router-dom";
+import shopBannerPhoto from "../assets/shop-banner-photo.jpg";
 
 function ShopPage() {
   const [products, setProducts] = useState([]);
@@ -19,8 +20,15 @@ function ShopPage() {
 
   return (
     <div className="shop-container">
-      <h1 className="shop-title">Shop</h1>
-
+      <div className="shop-banner">
+        <div className="shop-banner-title-description">
+          <h2>All products</h2>
+          <p className="shop-banner-description">
+            Featuring all of our iconic store items. Shop here if this is where you want to blah blah blah
+          </p>
+        </div>
+        <img src={shopBannerPhoto} alt="shop-banner-woman-handbag" />
+      </div>
       <ul className="products-container">
         {products.map((product) => {
           return (
@@ -30,7 +38,6 @@ function ShopPage() {
                 <h3 className="products-title">
                   {product.title.length > 65 ? `${product.title.substring(0, 65)}...` : product.title}
                 </h3>
-                <p>Category: {product.category}</p>
                 <p>£{product.price}</p>
               </li>
             </Link>

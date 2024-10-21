@@ -60,8 +60,32 @@ nav li.active {
   padding-top: 4vw;
 }
 
-.shop-title {
-  text-align: center;
+.shop-banner {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: lightgray;
+
+}
+
+.shop-banner-title-description {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%
+}
+
+.shop-banner > img {
+  width: 60vw;
+  height: 20vw;
+  filter: grayscale(100%) brightness(105%) contrast(105%); 
+  object-fit: cover;
+
+}
+
+.shop-banner-description {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 .products-container {
@@ -69,6 +93,7 @@ nav li.active {
   justify-content: center;
   flex-wrap: wrap;
   gap: 2rem;
+  margin-top: 3vw;
 }
 
 .product-container {
