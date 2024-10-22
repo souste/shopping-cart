@@ -178,8 +178,12 @@ nav li.active {
 .about-container {
   height: 100vw;
   margin-top: 5vw;
-  padding-left: 5vw;
-  padding-right: 5vw;
+  padding-left: 18vw;
+  padding-right: 15vw;
+  display: flex;
+  flex-direction: column;
+  gap: 3vw;
+  
 }
 
 .about-page-history {
@@ -188,7 +192,7 @@ nav li.active {
   gap: 2vw;
 }
 
-.about-history-text, .about-products-text {
+.about-history-text, .about-products-text, .about-guarantee-text {
   width: 30vw;
 }
 
@@ -201,6 +205,12 @@ nav li.active {
   display: flex;
   align-items: center;
 }
+
+.about-page-guarantee {
+  display: flex;
+  align-items: center;
+}
+
 
 
 
@@ -275,4 +285,33 @@ nav li.active {
 };
 
 
+/* Footer */
 
+.footer {
+  position: absolute;
+    bottom: 0;
+    width: 100%;
+  
+}
+
+.footer-top-email {
+  background-color: yellow;;
+}
+
+.footer-top-email > p {
+  color: red;
+  text-align: center;
+}
+
+
+
+.footer-bottom-copyright {
+  background-color: black;
+ 
+  
+}
+
+.footer-bottom-copyright > p {
+  color: white;
+  text-align: center;
+}

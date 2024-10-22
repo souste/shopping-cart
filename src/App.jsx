@@ -1,6 +1,7 @@
 import Home from "./pages/Home";
 import Shop from "./pages/Shop";
 import NavBar from "./NavBar";
+import Footer from "./Footer";
 import About from "./pages/About";
 import Cart from "./pages/Cart.jsx";
 import SingleProduct from "./pages/SingleProduct.jsx";
@@ -35,6 +36,7 @@ function App() {
           <Route path="/cart" element={<Cart cart={cart} />} />
         </Routes>
       </div>
+      <Footer />
     </div>
   );
 }

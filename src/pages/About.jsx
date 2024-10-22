@@ -1,6 +1,7 @@
 import "../styles.css";
 import oldShopPhoto from "../assets/about-page-80s-shop.jpg";
 import fashionProducts from "../assets/about-page-products.jpg";
+import moneyBackGuarantee from "../assets/about-money-guarantee.jpg";
 
 function About() {
   return (
@@ -17,7 +18,7 @@ function About() {
         <img className="about-shop-image" src={oldShopPhoto} alt="old-80s-shop" />
       </div>
       <div className="about-page-products">
-        <img src={fashionProducts} alt="" />
+        <img src={fashionProducts} alt="products-display" />
         <div>
           <h2>Products for the whole family</h2>
           <p className="about-products-text">
@@ -26,6 +27,16 @@ function About() {
             sell. If you don't like the product there is a guaranteed 30 day return policy.
           </p>
         </div>
+      </div>
+      <div className="about-page-guarantee">
+        <div>
+          <h2>30 Day Money Back Guarantee</h2>
+          <p className="about-guarantee-text">
+            We are so proud of the quality of our products that we have a 30 day money back guarantee, no questions
+            asked
+          </p>
+        </div>
+        <img src={moneyBackGuarantee} alt="money-back-guarantee" />
       </div>
     </div>
   );
