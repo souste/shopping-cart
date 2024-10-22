@@ -1,19 +1,32 @@
 import "../styles.css";
+import oldShopPhoto from "../assets/about-page-80s-shop.jpg";
+import fashionProducts from "../assets/about-page-products.jpg";
 
 function About() {
   return (
     <div className="about-container">
-      <h1 className="about-title">About Us</h1>
-      <p className="about-text">
-        Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem
-        aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo
-        enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos
-        qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet,
-        consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam
-        quaerat voluptatem. Ut enim ad minima veniam, quis nostrum exercitationem ullam corporis suscipit laboriosam,
-        nisi ut aliquid ex ea commodi consequatur? Quis autem vel eum iure reprehenderit qui in ea voluptate velit esse
-        quam nihil molestiae consequatur, vel illum qui dolorem eum fugiat quo voluptas nulla pariatur?
-      </p>
+      <div className="about-page-history">
+        <div>
+          <h2>About Us</h2>
+          <p className="about-history-text">
+            Established in 1982, we have always prided ourselves on delivering the highest quality of products. We
+            started off as a jewely company, opening our first store in the East of London. A family business, we have
+            always valued quality and customer experience over sales. This is something that will never change.
+          </p>
+        </div>
+        <img className="about-shop-image" src={oldShopPhoto} alt="old-80s-shop" />
+      </div>
+      <div className="about-page-products">
+        <img src={fashionProducts} alt="" />
+        <div>
+          <h2>Products for the whole family</h2>
+          <p className="about-products-text">
+            We started our business as a fashion store for women and soon branched out to cater to men. Eventually we
+            branched out to jewelery and electronic products. We pride ourselves on only having the finest products to
+            sell. If you don't like the product there is a guaranteed 30 day return policy.
+          </p>
+        </div>
+      </div>
     </div>
   );
 }

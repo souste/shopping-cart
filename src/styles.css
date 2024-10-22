@@ -76,7 +76,7 @@ nav li.active {
 }
 
 .shop-banner > img {
-  width: 60vw;
+  width: 50vw;
   height: 20vw;
   filter: grayscale(100%) brightness(105%) contrast(105%); 
   object-fit: cover;
@@ -84,8 +84,7 @@ nav li.active {
 }
 
 .shop-banner-description {
-  display: flex;
-  flex-wrap: wrap;
+ max-width: 60%
 }
 
 .products-container {
@@ -178,19 +177,34 @@ nav li.active {
 
 .about-container {
   height: 100vw;
-  padding-top: 4vw;
-  margin-left: 10vw;
-  margin-right: 10vw
+  margin-top: 5vw;
+  padding-left: 5vw;
+  padding-right: 5vw;
 }
 
-.about-title {
-  text-align: center;
+.about-page-history {
+  display: flex;
+  align-items: center;
+  gap: 2vw;
 }
 
-.about-text {
-  margin-left: 2em;
-  margin-right: 2em;
+.about-history-text, .about-products-text {
+  width: 30vw;
 }
+
+.about-shop-image {
+  width: 30vw;
+  height: 20vw;
+}
+
+.about-page-products {
+  display: flex;
+  align-items: center;
+}
+
+
+
+
 
 /* Cart Page */
 
