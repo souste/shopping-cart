@@ -1,16 +1,20 @@
 import "../styles.css";
 import { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
-import { getSingleProduct } from "../api";
 
-function Cart({ cart }) {
+function Cart({ cart: initialCart }) {
+  const [cart, setCart] = useState(initialCart);
   const [totalPrice, setTotalPrice] = useState(0);
 
-  const calculateTotalPrice = cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
+  const calculateTotalPrice = (cart) => cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
   useEffect(() => {
-    setTotalPrice(calculateTotalPrice);
-  }, [cart, calculateTotalPrice]);
+    setTotalPrice(calculateTotalPrice(cart));
+  }, [cart]);
+
+  const handleQuantityChange = (id, newQuantity) => {
+    const updatedCart = cart.map((product) => (product.id === id ? { ...product, quantity: newQuantity } : product));
+    setCart(updatedCart);
+  };
 
   return (
     <div className="cart-container">
@@ -30,7 +34,10 @@ function Cart({ cart }) {
                 <p className="cart-product-price">Price: £{product.price}</p>
                 <div className="quantity-increment">
                   <p>Qty:</p>
-                  <select defaultValue={product.quantity}>
+                  <select
+                    value={product.quantity}
+                    onChange={(e) => handleQuantityChange(product.id, parseInt(e.target.value))}
+                  >
                     <option value="1">1</option>
                     <option value="2">2</option>
                     <option value="3">3</option>
