@@ -55,7 +55,12 @@ function Cart({ cart: initialCart }) {
             </li>
           );
         })}
-        <p className="cart-total">Total Price: £{totalPrice} </p>
+        <div>
+          <p className="cart-total">Total Price: £{totalPrice} </p>
+          <button className="checkout-button" onClick={() => alert("Product Purchased")}>
+            Checkout
+          </button>
+        </div>
       </ul>
     </div>
   );

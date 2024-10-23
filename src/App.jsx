@@ -22,9 +22,9 @@ function App() {
   }, [cart]);
 
   return (
-    <div>
+    <div className="app-container">
       <NavBar />
-      <div className="container">
+      <div className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/shop" element={<Shop />} />

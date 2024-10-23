@@ -1,3 +1,20 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.app-container {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh
+}
+
+.main-content {
+  flex: 1;
+}
+
 /* NavBar */
 
 .nav {
@@ -56,8 +73,10 @@ nav li.active {
 /* Shop Page */
 
 .shop-container {
-  height: 100vw;
   padding-top: 4vw;
+  min-height: 100vh; 
+  display: flex;
+  flex-direction: column;
 }
 
 .shop-banner {
@@ -176,7 +195,6 @@ nav li.active {
 /* About Page */
 
 .about-container {
-  height: 100vw;
   margin-top: 5vw;
   padding-left: 18vw;
   padding-right: 15vw;
@@ -272,27 +290,29 @@ nav li.active {
   font-weight: bold;
 }
 
+
+
 .cart-total {
   font-weight: bold;
   font-size: 30px;
   margin-left: 45vw;
 
+  margin-bottom: 1vh;
+
 }
 
-.price-quantity-container {
-  display: flex;
-  gap: 3vw;
-};
+.checkout-button {
+  margin-left: 45vw;
+  width: 20vw;
+  color: white;
+  background-color: black;
+  margin-top: 0;
+}
+
 
 
 /* Footer */
 
-.footer {
-  position: absolute;
-    bottom: 0;
-    width: 100vw;
-  
-}
 
 .footer-top-email {
   background-color: yellow;;
