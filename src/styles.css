@@ -74,9 +74,18 @@ nav li.active {
 
 .shop-container {
   padding-top: 4vw;
-  min-height: 100vh; 
+  flex-grow: 1;
   display: flex;
   flex-direction: column;
+  min-height: 100vh;
+}
+
+.loading-placeholder {
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 50vh
 }
 
 .shop-banner {
@@ -313,6 +322,9 @@ nav li.active {
 
 /* Footer */
 
+.footer {
+  width: 100%;
+}
 
 .footer-top-email {
   background-color: yellow;;
