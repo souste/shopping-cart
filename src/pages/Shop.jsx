@@ -29,6 +29,7 @@ function ShopPage() {
               <p className="shop-banner-description">
                 Featuring all of our iconic store items. Shop here if this is where you want to blah blah blah
               </p>
+              <p>Have more stuff here to fill the box....need to figure out what to say...</p>
             </div>
             <img src={shopBannerPhoto} alt="shop-banner-woman-handbag" />
           </div>
