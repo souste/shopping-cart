@@ -22,19 +22,18 @@ html, body {
   justify-content: space-between;
   align-items: center;
   padding: 0.5rem 1rem;
-  border: 2px solid black;
   width: 100vw;
   position: fixed;
   top: 0;
-  background-color: rgb(63, 33, 33);
-  color: white;
+  background-color: #ffede7;
   min-height: 60px;
   z-index: 1000;
 }
 
-.site-title {
+#site-title {
   font-size: 2rem;
-  white-space: nowrap;
+  letter-spacing: 3px;
+  color: #c24244;
 }
 
 .nav ul {
@@ -53,14 +52,16 @@ html, body {
   padding: 0.25rem;
   display: flex;
   align-items: center;
+  color: #7f4722
 }
 
 nav li.active {
-  background-color: green;
+border-top: 2px solid black;
+border-bottom: 2px solid black;
 }
 
 .nav li:hover {
-  background-color: red;
+  border-bottom: 2px solid black;
 }
 
 /* Home Page  */
@@ -218,7 +219,7 @@ nav li.active {
 .about-page-history {
   display: flex;
   align-items: center;
-  gap: 2vw;
+  gap: 10vw;
 }
 
 .about-history-text, .about-products-text, .about-guarantee-text {
@@ -233,11 +234,17 @@ nav li.active {
 .about-page-products {
   display: flex;
   align-items: center;
+  gap: 10vw;
 }
 
 .about-page-guarantee {
   display: flex;
   align-items: center;
+  gap: 10vw;
+}
+
+.about-page-guarantee > img {
+  margin-left: 7vw;
 }
 
 

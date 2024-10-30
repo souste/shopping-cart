@@ -4,7 +4,7 @@ import "./styles.css";
 function NavBar() {
   return (
     <nav className="nav">
-      <Link to="/" className="site-title">
+      <Link to="/" id="site-title">
         El-Shopio
       </Link>
       <ul>
