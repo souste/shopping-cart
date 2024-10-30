@@ -10,7 +10,7 @@ function Footer() {
       </div>
       <div className="footer-bottom-copyright">
         <p className="footer-bottom-text">Developed by souste</p>
-        <p>@ Copyright 2024 Souste. All rights reserved</p>
+        <p>@ Copyright 2024 souste. All rights reserved</p>
       </div>
     </div>
   );
