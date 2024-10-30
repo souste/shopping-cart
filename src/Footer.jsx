@@ -4,7 +4,7 @@ function Footer() {
   return (
     <div className="footer">
       <div className="footer-top-email">
-        <p>Subscribe for top deals</p>
+        <h2>Become one of our members</h2>
         <p>Enjoy 10% off your next purchase when you sign up</p>
         <input type="text" />
       </div>

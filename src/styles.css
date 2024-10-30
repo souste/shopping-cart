@@ -28,6 +28,7 @@ html, body {
   background-color: #ffede7;
   min-height: 60px;
   z-index: 1000;
+  width: 100vw;
 }
 
 #site-title {
@@ -208,11 +209,11 @@ border-bottom: 2px solid black;
 
 .about-container {
   margin-top: 5vw;
-  padding-left: 18vw;
-  padding-right: 15vw;
   display: flex;
   flex-direction: column;
   gap: 3vw;
+  width: 100vw;
+  align-items: center;
   
 }
 
@@ -339,27 +340,31 @@ border-bottom: 2px solid black;
 }
 
 .footer-top-email {
-  background-color: yellow;;
+  background-color: black;
   display: flex;
-  flex-direction: column;
+  justify-content: center;
   align-items: center;
-  padding-bottom: 2vh;
+  gap: 5vw;
+}
 
+.footer-top-email > h2 {
+  color: white;
 }
 
 .footer-top-email > p {
-  color: red;
+  color: white;
   text-align: center;
 }
 
 .footer-top-email > input {
   width: 10vw;
+  height: 3vh
 }
 
 
 
 .footer-bottom-copyright {
-  background-color: black;
+  background-color: #272525;
  
   
 }
@@ -367,5 +372,6 @@ border-bottom: 2px solid black;
 .footer-bottom-copyright > p {
   color: white;
   text-align: center;
+  font-size: 10px;
 }
 
