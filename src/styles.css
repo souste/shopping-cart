@@ -381,6 +381,42 @@ nav li.active {
   height: 3vh;
 }
 
+.footer-middle-links {
+  background-color: #ffc038;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 4vw;
+}
+
+.footer-middle-links-lists li {
+  list-style: none;
+  font-size: 13px;
+}
+
+.footer-middle-links-lists-title {
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.footer-contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.footer-contact-title {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-contact-methods {
+  display: flex;
+  gap: 1vw;
+}
+
 .footer-bottom-copyright {
   background-color: #272525;
 }

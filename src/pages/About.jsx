@@ -17,6 +17,7 @@ function About() {
         </div>
         <img className="about-shop-image" src={oldShopPhoto} alt="old-80s-shop" />
       </div>
+      <div>Nov have stores located across the country, along with being an online retailer</div>
       <div className="about-page-products">
         <img src={fashionProducts} alt="products-display" />
         <div>
