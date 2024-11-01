@@ -40,9 +40,18 @@ function Footer() {
           </div>
 
           <div className="footer-contact-methods">
-            <div className="footer-phone">(000)-SOUSTE</div>
-            <div className="footer-email">support@souste.com</div>
-            <div className="footer-chat">Live Chat</div>
+            <div>
+              <div>[phone icon]</div>
+              <div className="footer-phone">(000)-SOUSTE</div>
+            </div>
+            <div>
+              <div>[email icon]</div>
+              <div className="footer-email">support@souste.com</div>
+            </div>
+            <div>
+              <div>[live chat icon]</div>
+              <div className="footer-chat">Live Chat</div>
+            </div>
           </div>
         </div>
       </div>
