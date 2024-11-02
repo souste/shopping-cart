@@ -8,6 +8,7 @@ function ShopPage() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState("");
+  const [activeCategory, setActiveCategory] = useState("");
 
   const categories = ["women's clothing", "men's clothing", "electronics", "jewelery"];
 
@@ -20,6 +21,7 @@ function ShopPage() {
 
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
+    setActiveCategory(category);
   };
 
   return (
@@ -41,12 +43,20 @@ function ShopPage() {
             <img src={shopBannerPhoto} alt="shop-banner-woman-handbag" />
           </div>
           <div className="categories-container">
-            <ul>
-              <li key="all" onClick={() => handleCategoryChange("")}>
-                ALL PRODUCTS
+            <ul className="categories-list">
+              <li
+                key="all"
+                className={`categories-list-item ${selectedCategory === "" ? "active" : ""}`}
+                onClick={() => handleCategoryChange("")}
+              >
+                all products
               </li>
               {categories.map((category) => (
-                <li key={category} onClick={() => handleCategoryChange(category)}>
+                <li
+                  key={category}
+                  className={`categories-list-item ${activeCategory === category ? "active" : ""}`}
+                  onClick={() => handleCategoryChange(category)}
+                >
                   {category}
                 </li>
               ))}

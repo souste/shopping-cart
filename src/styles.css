@@ -159,6 +159,19 @@ nav li.active {
   margin-top: 3vw;
 }
 
+.categories-list li {
+  list-style: none;
+}
+
+.categories-list li:hover {
+  cursor: pointer;
+}
+
+.categories-list li.active {
+  border-bottom: 1px solid black;
+  background-color: yellow;
+}
+
 .product-container {
   list-style: none;
   width: 20vw;
