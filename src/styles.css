@@ -116,6 +116,7 @@ nav li.active {
   display: flex;
   flex-direction: column;
   min-height: 100vh;
+  min-width: 100vw;
 }
 
 .loading-placeholder {
@@ -157,6 +158,11 @@ nav li.active {
   flex-wrap: wrap;
   gap: 2rem;
   margin-top: 3vw;
+  min-width: 95vw;
+}
+
+.categories-list {
+  width: 10vw;
 }
 
 .categories-list li {
@@ -168,7 +174,7 @@ nav li.active {
 }
 
 .categories-list li.active {
-  border-bottom: 1px solid black;
+  font-weight: bold;
   background-color: yellow;
 }
 
