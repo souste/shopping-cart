@@ -1,4 +1,7 @@
 import "./styles.css";
+import phoneIcon from "./assets/phone-icon.png";
+import mailIcon from "./assets/mail-icon.png";
+import liveChatIcon from "./assets/live-chat-icon.png";
 
 function Footer() {
   return (
@@ -35,21 +38,21 @@ function Footer() {
         </ul>
         <div className="footer-contact">
           <div className="footer-contact-title">
-            <h2>ASK A SPECIALIST</h2>
-            <p>We are here to help</p>
+            <p className="contact-title">ASK A SPECIALIST</p>
+            <p>Need help? Contact us by phone, email, or live chat. </p>
           </div>
 
           <div className="footer-contact-methods">
-            <div>
-              <div>[phone icon]</div>
+            <div className="icon-contact-container">
+              <img src={phoneIcon} alt="phone-icon" />
               <div className="footer-phone">(000)-SOUSTE</div>
             </div>
-            <div>
-              <div>[email icon]</div>
+            <div className="icon-contact-container">
+              <img src={mailIcon} alt="mail-icon" />
               <div className="footer-email">support@souste.com</div>
             </div>
-            <div>
-              <div>[live chat icon]</div>
+            <div className="icon-contact-container">
+              <img src={liveChatIcon} alt="live-chat-icon" />
               <div className="footer-chat">Live Chat</div>
             </div>
           </div>
