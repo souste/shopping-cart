@@ -127,6 +127,38 @@ nav li.active {
   min-height: 50vh;
 }
 
+.categories-container {
+  margin-top: 0;
+}
+
+.categories-list {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  gap: 5vw;
+  margin: 0;
+  background-color: black;
+  color: white;
+  border: 2px solid black;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+.categories-list li {
+  list-style: none;
+  padding: 0.3em;
+}
+
+.categories-list li:hover {
+  cursor: pointer;
+}
+
+.categories-list li.active {
+  display: inline-block;
+  font-weight: bold;
+  background-color: #ffc038;
+  color: black;
+}
+
 .shop-banner {
   display: flex;
   justify-content: space-between;
@@ -159,23 +191,6 @@ nav li.active {
   gap: 2rem;
   margin-top: 3vw;
   min-width: 95vw;
-}
-
-.categories-list {
-  width: 10vw;
-}
-
-.categories-list li {
-  list-style: none;
-}
-
-.categories-list li:hover {
-  cursor: pointer;
-}
-
-.categories-list li.active {
-  font-weight: bold;
-  background-color: yellow;
 }
 
 .product-container {
@@ -373,7 +388,7 @@ nav li.active {
 .footer {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  min-width: 100vw;
   gap: 0;
 }
 

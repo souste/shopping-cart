@@ -20,7 +20,7 @@ function Footer() {
           <li>Our Story</li>
           <li>Locations</li>
           <li>In Store Shopping</li>
-          <li>Fashion Trends</li>
+          <li>Our Vision</li>
           <li>Social Media</li>
         </ul>
         <ul className="footer-middle-links-lists">

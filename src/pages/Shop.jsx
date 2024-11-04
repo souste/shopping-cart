@@ -32,16 +32,6 @@ function ShopPage() {
         </div>
       ) : (
         <>
-          <div className="shop-banner">
-            <div className="shop-banner-title-description">
-              <h2>All products</h2>
-              <p className="shop-banner-description">
-                Featuring all of our iconic store items. Shop here if this is where you want to blah blah blah
-              </p>
-              <p>Have more stuff here to fill the box....need to figure out what to say...</p>
-            </div>
-            <img src={shopBannerPhoto} alt="shop-banner-woman-handbag" />
-          </div>
           <div className="categories-container">
             <ul className="categories-list">
               <li
@@ -61,6 +51,16 @@ function ShopPage() {
                 </li>
               ))}
             </ul>
+          </div>
+          <div className="shop-banner">
+            <div className="shop-banner-title-description">
+              <h2>All products</h2>
+              <p className="shop-banner-description">
+                Featuring all of our iconic store items. Shop here if this is where you want to blah blah blah
+              </p>
+              <p>Have more stuff here to fill the box....need to figure out what to say...</p>
+            </div>
+            <img src={shopBannerPhoto} alt="shop-banner-woman-handbag" />
           </div>
           <ul className="products-container">
             {products.map((product) => {
