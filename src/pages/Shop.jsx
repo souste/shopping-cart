@@ -2,15 +2,21 @@ import { useEffect, useState } from "react";
 import "../styles.css";
 import { getProducts } from "../api";
 import { Link } from "react-router-dom";
-import shopBannerPhoto from "../assets/shop-banner-photo.jpg";
+import allProductsPhoto from "../assets/all-products-photo.jpg";
+import womensClothingPhoto from "../assets/womens-clothing.jpg";
+import mensClothingPhoto from "../assets/mens-clothing.jpg";
+import electronicsPhoto from "../assets/electronics-photo.jpg";
+import jeweleryPhoto from "../assets/jewelery-photo.jpg";
 
 function ShopPage() {
   const [products, setProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [selectedCategory, setSelectedCategory] = useState("");
   const [activeCategory, setActiveCategory] = useState("");
+  const [activeCategoryPhoto, setActiveCategoryPhoto] = useState(allProductsPhoto);
 
   const categories = ["women's clothing", "men's clothing", "electronics", "jewelery"];
+  const categoryPhoto = [allProductsPhoto, womensClothingPhoto, mensClothingPhoto, electronicsPhoto, jeweleryPhoto];
 
   useEffect(() => {
     getProducts().then((products) => {
@@ -22,6 +28,14 @@ function ShopPage() {
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
     setActiveCategory(category);
+  };
+
+  const handleCategoryImageChange = (category) => {
+    if (category == "") setActiveCategoryPhoto(allProductsPhoto);
+    if (category == "women's clothing") setActiveCategoryPhoto(womensClothingPhoto);
+    if (category == "men's clothing") setActiveCategoryPhoto(mensClothingPhoto);
+    if (category == "electronics") setActiveCategoryPhoto(electronicsPhoto);
+    if (category == "jewelery") setActiveCategoryPhoto(jeweleryPhoto);
   };
 
   return (
@@ -38,6 +52,7 @@ function ShopPage() {
                 key="all"
                 className={`categories-list-item ${selectedCategory === "" ? "active" : ""}`}
                 onClick={() => handleCategoryChange("")}
+                onClick={() => handleCategoryImageChange("")}
               >
                 all products
               </li>
@@ -46,6 +61,7 @@ function ShopPage() {
                   key={category}
                   className={`categories-list-item ${activeCategory === category ? "active" : ""}`}
                   onClick={() => handleCategoryChange(category)}
+                  onClick={() => handleCategoryImageChange(category)}
                 >
                   {category}
                 </li>
@@ -60,7 +76,7 @@ function ShopPage() {
               </p>
               <p>Have more stuff here to fill the box....need to figure out what to say...</p>
             </div>
-            <img src={shopBannerPhoto} alt="shop-banner-woman-handbag" />
+            <img src={activeCategoryPhoto} alt="shop-banner-woman-handbag" />
           </div>
           <ul className="products-container">
             {products.map((product) => {

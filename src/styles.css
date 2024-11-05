@@ -163,7 +163,7 @@ nav li.active {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: lightgray;
+  background-color: rgb(238, 221, 221);
 }
 
 .shop-banner-title-description {
@@ -176,7 +176,6 @@ nav li.active {
 .shop-banner > img {
   width: 90vw;
   height: 20vw;
-  filter: grayscale(100%) brightness(105%) contrast(105%);
   object-fit: cover;
 }
 
