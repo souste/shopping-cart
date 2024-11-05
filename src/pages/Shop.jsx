@@ -16,7 +16,7 @@ function ShopPage() {
   const [activeCategoryPhoto, setActiveCategoryPhoto] = useState(allProductsPhoto);
 
   const categories = ["women's clothing", "men's clothing", "electronics", "jewelery"];
-  const categoryPhoto = [allProductsPhoto, womensClothingPhoto, mensClothingPhoto, electronicsPhoto, jeweleryPhoto];
+  // const categoryPhoto = [allProductsPhoto, womensClothingPhoto, mensClothingPhoto, electronicsPhoto, jeweleryPhoto];
 
   useEffect(() => {
     getProducts().then((products) => {
@@ -28,14 +28,27 @@ function ShopPage() {
   const handleCategoryChange = (category) => {
     setSelectedCategory(category);
     setActiveCategory(category);
+    handleCategoryImageChange(category);
   };
 
   const handleCategoryImageChange = (category) => {
-    if (category == "") setActiveCategoryPhoto(allProductsPhoto);
-    if (category == "women's clothing") setActiveCategoryPhoto(womensClothingPhoto);
-    if (category == "men's clothing") setActiveCategoryPhoto(mensClothingPhoto);
-    if (category == "electronics") setActiveCategoryPhoto(electronicsPhoto);
-    if (category == "jewelery") setActiveCategoryPhoto(jeweleryPhoto);
+    switch (category) {
+      case "":
+        setActiveCategoryPhoto(allProductsPhoto);
+        break;
+      case "women's clothing":
+        setActiveCategoryPhoto(womensClothingPhoto);
+        break;
+      case "men's clothing":
+        setActiveCategoryPhoto(mensClothingPhoto);
+        break;
+      case "electronics":
+        setActiveCategoryPhoto(electronicsPhoto);
+        break;
+      case "jewelery":
+        setActiveCategoryPhoto(jeweleryPhoto);
+        break;
+    }
   };
 
   return (
@@ -52,7 +65,7 @@ function ShopPage() {
                 key="all"
                 className={`categories-list-item ${selectedCategory === "" ? "active" : ""}`}
                 onClick={() => handleCategoryChange("")}
-                onClick={() => handleCategoryImageChange("")}
+                // onClick={() => handleCategoryImageChange("")}
               >
                 all products
               </li>
@@ -61,7 +74,7 @@ function ShopPage() {
                   key={category}
                   className={`categories-list-item ${activeCategory === category ? "active" : ""}`}
                   onClick={() => handleCategoryChange(category)}
-                  onClick={() => handleCategoryImageChange(category)}
+                  // onClick={() => handleCategoryImageChange(category)}
                 >
                   {category}
                 </li>
