@@ -163,8 +163,9 @@ nav li.active {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: rgb(238, 221, 221);
+  background-color: #f2f2f2;
 }
+/* or #F2F2F2 #E8F6F3 */
 
 .shop-banner-title-description {
   display: flex;
@@ -194,16 +195,25 @@ nav li.active {
 
 .product-container {
   list-style: none;
-  width: 20vw;
-  height: 50vh;
+  width: 15vw;
+  height: 40vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   cursor: pointer;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
-  padding: 2vw;
+  padding: 1vw;
   /* this is what I changed to make it three to a row */
+}
+
+.product-price {
+  margin-left: 80%;
+  color: black;
+  font-weight: bold;
+  background-color: #ffc038;
+  margin-top: 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 .product-container > img {
@@ -219,18 +229,21 @@ nav li.active {
 .products-title {
   padding-left: 5%;
   padding-right: 5%;
+  color: black;
 }
 
 /* Single Product */
 
 .single-product-container {
+  margin-top: 10vh;
+  margin-bottom: 5vh;
   padding: 5vw;
   list-style: none;
   display: flex;
   margin-left: 20vw;
   margin-right: 20vw;
   gap: 3vw;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
   align-items: center;
 }
 
@@ -239,13 +252,27 @@ nav li.active {
   width: 25vw;
 }
 
+.single-product-information {
+  margin-left: 5vw;
+}
+
 .single-product-title {
   font-size: 30px;
+  color: #c8651b;
+  margin-bottom: 0;
 }
 
 .single-product-price {
   font-size: 30px;
   font-weight: bold;
+  margin-top: 0;
+  border-bottom: 2px solid black;
+  padding-bottom: 1.5vh;
+}
+
+.single-product-category {
+  margin-bottom: 3vh;
+  margin-top: 4vh;
 }
 
 .quantity-increment {
@@ -254,19 +281,25 @@ nav li.active {
 }
 
 .increment-button {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-  color: white;
-  background-color: black;
+  color: black;
+  width: 2vw;
+  background-color: white;
+  /* padding: 0; */
 }
 
 .addtocart-button {
   width: 20vw;
   color: white;
-  background-color: black;
+  color: black;
+  border: 2px solid #c8651b;
+  margin-top: 3vh;
+  color: #c8651b;
+  background-color: white;
 }
 
 .addtocart-button:hover {
   transform: scale(1.1);
+  border: 3px solid #ffc038;
 }
 
 .increment-button:hover {

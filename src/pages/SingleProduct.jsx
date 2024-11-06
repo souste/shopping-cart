@@ -36,8 +36,9 @@ function SingleProduct({ handleCartClick, quantity, setQuantity }) {
         <img src={product.image} alt={product.title} />
         <div className="single-product-information">
           <h3 className="single-product-title">{product.title}</h3>
+          <p className="single-product-price">£{product.price}</p>
           <p>{product.description}</p>
-          <p>Category: {product.category}</p>
+          <p className="single-product-category">Category: {product.category}</p>
           <div className="quantity-increment">
             <button className="increment-button" onClick={handleMinusClick}>
               -
@@ -47,7 +48,7 @@ function SingleProduct({ handleCartClick, quantity, setQuantity }) {
               +
             </button>
           </div>
-          <p className="single-product-price">£{product.price}</p>
+
           <Link to={`/shop`}>
             <button
               className="addtocart-button"
