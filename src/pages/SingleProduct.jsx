@@ -38,7 +38,7 @@ function SingleProduct({ handleCartClick, quantity, setQuantity }) {
           <h3 className="single-product-title">{product.title}</h3>
           <p className="single-product-price">£{product.price}</p>
           <p>{product.description}</p>
-          <p className="single-product-category">Category: {product.category}</p>
+          <p className="single-product-increment-title">QUANTITY:</p>
           <div className="quantity-increment">
             <button className="increment-button" onClick={handleMinusClick}>
               -

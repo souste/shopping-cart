@@ -240,10 +240,7 @@ nav li.active {
   padding: 5vw;
   list-style: none;
   display: flex;
-  margin-left: 20vw;
-  margin-right: 20vw;
   gap: 3vw;
-  /* box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19); */
   align-items: center;
 }
 
@@ -270,9 +267,9 @@ nav li.active {
   padding-bottom: 1.5vh;
 }
 
-.single-product-category {
-  margin-bottom: 3vh;
+.single-product-increment-title {
   margin-top: 4vh;
+  font-weight: bold;
 }
 
 .quantity-increment {
@@ -282,9 +279,9 @@ nav li.active {
 
 .increment-button {
   color: black;
-  width: 2vw;
   background-color: white;
-  /* padding: 0; */
+  padding-top: 0.5vh;
+  padding-bottom: 0.5vh;
 }
 
 .addtocart-button {
@@ -302,9 +299,9 @@ nav li.active {
   border: 3px solid #ffc038;
 }
 
-.increment-button:hover {
+/* .increment-button:hover {
   transform: scale(1.1);
-}
+} */
 
 /* About Page */
 
