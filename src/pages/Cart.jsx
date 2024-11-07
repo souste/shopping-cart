@@ -18,7 +18,7 @@ function Cart({ cart: initialCart }) {
 
   return (
     <div className="cart-container">
-      <h1>Your Shopping Cart</h1>
+      <h1>Your Cart</h1>
 
       <ul>
         {cart.map((product) => {

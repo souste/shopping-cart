@@ -5,7 +5,7 @@ function NavBar() {
   return (
     <nav className="nav">
       <Link to="/" id="site-title">
-        El-Shopio
+        Souste
       </Link>
       <ul>
         <CustomLink to="/shop">Shop</CustomLink>
