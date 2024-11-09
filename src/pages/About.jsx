@@ -52,7 +52,7 @@ function About() {
       </div>
       <div className="about-page-sustainability">
         <div className="about-sustainability-text-container">
-          <h2>Commitment to a Sustainable Future</h2>
+          <h2 className="about-sustainability-title">Commitment to a Sustainable Future</h2>
           <p className="about-sustainability-text">
             We’re committed to sustainable practices and minimizing our environmental impact. We source eco-friendly
             materials, reduce waste, and optimize energy consumption. By choosing sustainable options and supporting

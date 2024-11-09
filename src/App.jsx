@@ -7,6 +7,7 @@ import Cart from "./pages/Cart.jsx";
 import SingleProduct from "./pages/SingleProduct.jsx";
 import { Route, Routes } from "react-router-dom";
 import { useState, useEffect } from "react";
+import "@fontsource/literata";
 
 function App() {
   const [quantity, setQuantity] = useState(1);
