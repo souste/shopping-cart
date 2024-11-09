@@ -58,12 +58,20 @@ body {
   color: black;
 }
 
+.cart-button {
+  height: 30px;
+}
+
 nav li.active {
   border-bottom: 2px solid black;
 }
 
 .nav li:hover {
   border-bottom: 2px solid black;
+}
+
+.cart-button:hover {
+  transform: scale(1.2);
 }
 
 /* Home Page  */
@@ -164,9 +172,8 @@ nav li.active {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  background-color: #f2f2f2;
+  background-color: #e8f6f3;
 }
-/* or #F2F2F2 #E8F6F3 */
 
 .shop-banner-title {
   font-size: 2rem;
@@ -313,8 +320,13 @@ nav li.active {
 }
 
 .back-button {
-  width: 5vw;
+  width: 4vw;
   background-color: white;
+  border: white;
+}
+
+.back-button:hover {
+  transform: scale(1.2);
 }
 
 /* About Page */
@@ -359,9 +371,6 @@ nav li.active {
   gap: 5vw;
 }
 
-.about-guarantee-text {
-}
-
 .about-page-sustainability {
   display: flex;
   align-items: center;
@@ -374,22 +383,27 @@ nav li.active {
 .about-sustainability-text-container {
   width: 50%;
   color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-end;
+  text-align: right;
 }
 
 .about-sustainability-text,
 .about-sustainability-title {
   width: 70%;
-  padding-left: 15vw;
+  padding-right: 2vw;
+}
+
+.about-sustainability-title {
+  text-align: right;
 }
 
 .about-sustainability-image {
   width: 50%;
   height: 50vh;
 }
-
-/* .about-page-guarantee > img {
-  margin-left: 7vw;
-} */
 
 /* Cart Page */
 
@@ -487,10 +501,11 @@ nav li.active {
 
 .subscribe-input {
   width: 15vw;
-  height: 4vh;
+  height: 4.4vh;
   border: 1px solid #ffc038;
   background-color: black;
   color: #ffc038;
+  padding-left: 1vw;
 }
 
 .subscribe-input::placeholder {
@@ -503,6 +518,10 @@ nav li.active {
   border-radius: 0;
   padding-inline: 25px;
   padding-bottom: 1.3vh;
+}
+
+.subscribe-button:hover {
+  transform: scale(1.1);
 }
 
 .footer-middle-links {

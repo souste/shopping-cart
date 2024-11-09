@@ -58,6 +58,10 @@ function About() {
             materials, reduce waste, and optimize energy consumption. By choosing sustainable options and supporting
             ethical initiatives, we strive to create a better future for generations to come.
           </p>
+          <p className="about-sustainability-text">
+            We believe in transparency and accountability. We regularly assess our environmental impact and share our
+            progress with our customers. By working together, we can create a more sustainable future.
+          </p>
           <div></div>
         </div>
         <img className="about-sustainability-image" src={sustainability} alt="hand-holding-planet" />
