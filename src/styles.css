@@ -168,6 +168,13 @@ nav li.active {
 }
 /* or #F2F2F2 #E8F6F3 */
 
+.shop-banner-title {
+  font-size: 2rem;
+  letter-spacing: 3px;
+  font-weight: bold;
+  margin-bottom: 0;
+}
+
 .shop-banner-title-description {
   display: flex;
   flex-direction: column;
@@ -182,7 +189,7 @@ nav li.active {
 }
 
 .shop-banner-description {
-  max-width: 60%;
+  max-width: 70%;
 }
 
 .products-container {
@@ -205,7 +212,6 @@ nav li.active {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
   border-radius: 10px;
   padding: 1vw;
-  /* this is what I changed to make it three to a row */
 }
 
 .product-price {
@@ -285,6 +291,12 @@ nav li.active {
   padding-bottom: 0.5vh;
 }
 
+.single-product-buttons-container {
+  display: flex;
+  flex-direction: column;
+  gap: 2vh;
+}
+
 .addtocart-button {
   width: 20vw;
   color: white;
@@ -300,9 +312,10 @@ nav li.active {
   border: 3px solid #ffc038;
 }
 
-/* .increment-button:hover {
-  transform: scale(1.1);
-} */
+.back-button {
+  width: 5vw;
+  background-color: white;
+}
 
 /* About Page */
 

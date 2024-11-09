@@ -100,7 +100,7 @@ function ShopPage() {
           </div>
           <div className="shop-banner">
             <div className="shop-banner-title-description">
-              <h2>{activeCategoryTitle}</h2>
+              <h2 className="shop-banner-title">{activeCategoryTitle}</h2>
               <p className="shop-banner-description">{activeCategoryText}</p>
             </div>
             <img src={activeCategoryPhoto} alt="shop-banner-woman-handbag" />

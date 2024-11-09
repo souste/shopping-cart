@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
 import { getSingleProduct } from "../api";
 import { Link } from "react-router-dom";
+import backIcon from "../assets/icons8-return-48.png";
 
 function SingleProduct({ handleCartClick, quantity, setQuantity }) {
   const { productId } = useParams();
@@ -49,12 +50,15 @@ function SingleProduct({ handleCartClick, quantity, setQuantity }) {
             </button>
           </div>
 
-          <Link to={`/shop`}>
+          <Link to={`/shop`} className="single-product-buttons-container">
             <button
               className="addtocart-button"
               onClick={() => handleCartClick(product.title, product.price, product.id, product.image)}
             >
               Add to Cart
+            </button>
+            <button className="back-button">
+              <img src={backIcon} alt="back-button" />
             </button>
           </Link>
         </div>
