@@ -24,7 +24,7 @@ function App() {
 
   return (
     <div className="app-container">
-      <NavBar />
+      <NavBar cart={cart} />
       <div className="main-content">
         <Routes>
           <Route path="/" element={<Home />} />

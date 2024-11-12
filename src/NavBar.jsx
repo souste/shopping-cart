@@ -2,7 +2,7 @@ import { Link, useMatch, useResolvedPath } from "react-router-dom";
 import "./styles.css";
 import cartButton from "./assets/icons8-add-to-cart-50.png";
 
-function NavBar() {
+function NavBar({ cart }) {
   return (
     <nav className="nav">
       <Link to="/" id="site-title">
@@ -12,7 +12,7 @@ function NavBar() {
         <CustomLink to="/shop">Shop</CustomLink>
         <CustomLink to="/about">About</CustomLink>
         <CustomLink to="/cart">
-          <img src={cartButton} alt="cart-button" className="cart-button" />
+          <img src={cartButton} alt="cart-button" className="cart-button" /> {cart.length}
         </CustomLink>
       </ul>
     </nav>
