@@ -37,7 +37,7 @@ function SingleProduct({ handleCartClick, quantity, setQuantity }) {
         <img src={product.image} alt={product.title} />
         <div className="single-product-information">
           <h3 className="single-product-title">{product.title}</h3>
-          <p className="single-product-price">£{product.price}</p>
+          <p className="single-product-price">£{product.price.toFixed(2)}</p>
           <p>{product.description}</p>
           <p className="single-product-increment-title">QUANTITY:</p>
           <div className="quantity-increment">

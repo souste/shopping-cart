@@ -38,7 +38,7 @@ function Cart({ cart: initialCart, onCartChange }) {
                 {product.title.length > 50 ? `${product.title.substring(0, 50)}...` : product.title}
               </h3>
               <div>
-                <p className="cart-product-price">Price: £{product.price}</p>
+                <p className="cart-product-price">Price: £{product.price.toFixed(2)}</p>
                 <div className="quantity-increment">
                   <p>Qty:</p>
                   <select
