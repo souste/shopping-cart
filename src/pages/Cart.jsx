@@ -16,6 +16,12 @@ function Cart({ cart: initialCart }) {
     setCart(updatedCart);
   };
 
+  const removeFromCart = (id) => {
+    const updatedCart = cart.filter((product) => product.id !== id);
+    setCart(updatedCart);
+    setTotalPrice(calculateTotalPrice(updatedCart));
+  };
+
   return (
     <div className="cart-container">
       <h1>Your Cart</h1>
@@ -52,6 +58,7 @@ function Cart({ cart: initialCart }) {
                 </div>
                 <p className="cart-subtotal">Subtotal: £{product.price * product.quantity}</p>
               </div>
+              <button onClick={() => removeFromCart(product.id)}>Remove</button>
             </li>
           );
         })}
