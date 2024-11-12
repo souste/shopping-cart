@@ -429,6 +429,7 @@ nav li.active {
   align-items: center;
   padding-left: 5vw;
   padding-right: 5vw;
+  border-bottom: 1px solid black;
 }
 
 .cart-image {

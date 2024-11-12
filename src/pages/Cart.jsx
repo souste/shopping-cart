@@ -1,7 +1,7 @@
 import "../styles.css";
 import { useState, useEffect } from "react";
 
-function Cart({ cart: initialCart }) {
+function Cart({ cart: initialCart, onCartChange }) {
   const [cart, setCart] = useState(initialCart);
   const [totalPrice, setTotalPrice] = useState(0);
 
@@ -20,6 +20,7 @@ function Cart({ cart: initialCart }) {
     const updatedCart = cart.filter((product) => product.id !== id);
     setCart(updatedCart);
     setTotalPrice(calculateTotalPrice(updatedCart));
+    onCartChange(updatedCart.length);
   };
 
   return (
@@ -56,14 +57,14 @@ function Cart({ cart: initialCart }) {
                     <option value="10">10</option>
                   </select>
                 </div>
-                <p className="cart-subtotal">Subtotal: £{product.price * product.quantity}</p>
+                <p className="cart-subtotal">Subtotal: £{(product.price * product.quantity).toFixed(2)}</p>
               </div>
               <button onClick={() => removeFromCart(product.id)}>Remove</button>
             </li>
           );
         })}
         <div>
-          <p className="cart-total">Total Price: £{totalPrice} </p>
+          <p className="cart-total">Total Price: £{totalPrice.toFixed(2)} </p>
           <button className="checkout-button" onClick={() => alert("Product Purchased")}>
             Checkout
           </button>

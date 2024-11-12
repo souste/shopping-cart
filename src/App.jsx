@@ -22,6 +22,10 @@ function App() {
     console.log("cart updated", cart);
   }, [cart]);
 
+  const handleCartChange = (newCartLength) => {
+    console.log(`Cart has ${newCartLength} items`);
+  };
+
   return (
     <div className="app-container">
       <NavBar cart={cart} />
@@ -34,7 +38,7 @@ function App() {
             path="products/:productId"
             element={<SingleProduct handleCartClick={handleCartClick} quantity={quantity} setQuantity={setQuantity} />}
           />
-          <Route path="/cart" element={<Cart cart={cart} />} />
+          <Route path="/cart" element={<Cart cart={cart} onCartChange={handleCartChange} />} />
         </Routes>
       </div>
       <Footer />
