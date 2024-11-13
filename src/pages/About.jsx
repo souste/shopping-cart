@@ -48,7 +48,7 @@ function About() {
             which is why we offer a 30-day money-back guarantee on all eligible purchases.
           </p>
         </div>
-        <img src={moneyBackGuarantee} alt="money-back-guarantee" />
+        <img className="about-shop-image" src={moneyBackGuarantee} alt="money-back-guarantee" />
       </div>
       <div className="about-page-sustainability">
         <div className="about-sustainability-text-container">

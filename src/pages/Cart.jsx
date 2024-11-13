@@ -1,8 +1,7 @@
 import "../styles.css";
 import { useState, useEffect } from "react";
 
-function Cart({ cart: initialCart, onCartChange }) {
-  const [cart, setCart] = useState(initialCart);
+function Cart({ cart, setCart }) {
   const [totalPrice, setTotalPrice] = useState(0);
 
   const calculateTotalPrice = (cart) => cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
@@ -20,7 +19,6 @@ function Cart({ cart: initialCart, onCartChange }) {
     const updatedCart = cart.filter((product) => product.id !== id);
     setCart(updatedCart);
     setTotalPrice(calculateTotalPrice(updatedCart));
-    onCartChange(updatedCart.length);
   };
 
   return (
