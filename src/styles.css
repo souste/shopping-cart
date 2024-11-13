@@ -299,8 +299,8 @@ nav li.active {
 
 .single-product-buttons-container {
   display: flex;
-  flex-direction: column;
   gap: 2vh;
+  align-items: center;
 }
 
 .addtocart-button {
@@ -318,8 +318,12 @@ nav li.active {
   border: 3px solid #ffc038;
 }
 
+.back-button-container {
+  padding-top: 3vh;
+  display: flex;
+}
+
 .back-button {
-  width: 4vw;
   background-color: white;
   border: white;
 }
@@ -411,16 +415,26 @@ nav li.active {
   flex-direction: column;
   align-items: center;
   width: 100vw;
-  padding-top: 4vw;
+  padding-top: 16vh;
+}
+
+.cart-titles {
+  display: flex;
+  gap: 18vw;
+}
+
+.price-quantity-subtotal-title-container {
+  display: flex;
+  gap: 5vw;
 }
 
 .cart-container > ul {
   display: flex;
   flex-direction: column;
-  gap: 3vw;
 }
 
 .cart-product-container {
+  padding-top: 1vh;
   list-style: none;
   display: flex;
   gap: 3vw;
@@ -428,7 +442,9 @@ nav li.active {
   align-items: center;
   padding-left: 5vw;
   padding-right: 5vw;
-  border-bottom: 1px solid black;
+  border-bottom: 1px solid grey;
+  border-top: 1px solid grey;
+  margin: 1vh 0;
 }
 
 .cart-image {
@@ -438,6 +454,11 @@ nav li.active {
 .cart-product-title {
   margin-right: 0;
   flex-wrap: wrap;
+}
+
+.price-quantity-subtotal-container {
+  display: flex;
+  gap: 6vw;
 }
 
 .cart-product-price,
@@ -451,6 +472,7 @@ nav li.active {
   height: 1vw;
   width: 3vw;
   align-items: center;
+  padding-top: 3vh;
 }
 
 .cart-subtotal {
@@ -461,16 +483,20 @@ nav li.active {
   font-weight: bold;
   font-size: 30px;
   margin-left: 45vw;
-
   margin-bottom: 1vh;
+  border-bottom: 1px solid grey;
+  padding-bottom: 1vh;
 }
 
 .checkout-button {
   margin-left: 45vw;
-  width: 20vw;
+  width: 15vw;
   color: white;
   background-color: black;
-  margin-top: 0;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+  font-size: 1rem;
+  letter-spacing: 3px;
 }
 
 /* Footer */

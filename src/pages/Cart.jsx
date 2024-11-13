@@ -25,46 +25,56 @@ function Cart({ cart: initialCart, onCartChange }) {
 
   return (
     <div className="cart-container">
-      <h1>Your Cart</h1>
-
+      <h2>YOUR CART</h2>
+      <div className="cart-titles">
+        <div className="item-title-container">
+          <p>ITEM</p>
+        </div>
+        <div className="price-quantity-subtotal-title-container">
+          <p>PRICE</p>
+          <p>QUANTITY</p>
+          <p>SUBTOTAL</p>
+        </div>
+      </div>
       <ul>
         {cart.map((product) => {
           return (
-            <li key={product.id} className="cart-product-container">
-              <div>
-                <img className="cart-image" src={product.image} alt="" />
-              </div>
-              <h3 className="cart-product-title">
-                {product.title.length > 50 ? `${product.title.substring(0, 50)}...` : product.title}
-              </h3>
-              <div>
-                <p className="cart-product-price">Price: £{product.price.toFixed(2)}</p>
-                <div className="quantity-increment">
-                  <p>Qty:</p>
-                  <select
-                    value={product.quantity}
-                    onChange={(e) => handleQuantityChange(product.id, parseInt(e.target.value))}
-                  >
-                    <option value="1">1</option>
-                    <option value="2">2</option>
-                    <option value="3">3</option>
-                    <option value="4">4</option>
-                    <option value="5">5</option>
-                    <option value="6">6</option>
-                    <option value="7">7</option>
-                    <option value="8">8</option>
-                    <option value="9">9</option>
-                    <option value="10">10</option>
-                  </select>
+            <div key="cart-list">
+              <li key={product.id} className="cart-product-container">
+                <div>
+                  <img className="cart-image" src={product.image} alt="" />
                 </div>
-                <p className="cart-subtotal">Subtotal: £{(product.price * product.quantity).toFixed(2)}</p>
-              </div>
-              <button onClick={() => removeFromCart(product.id)}>Remove</button>
-            </li>
+                <h3 className="cart-product-title">
+                  {product.title.length > 25 ? `${product.title.substring(0, 25)}...` : product.title}
+                </h3>
+                <div className="price-quantity-subtotal-container">
+                  <p className="cart-product-price">£{product.price.toFixed(2)}</p>
+                  <div className="quantity-increment">
+                    <select
+                      value={product.quantity}
+                      onChange={(e) => handleQuantityChange(product.id, parseInt(e.target.value))}
+                    >
+                      <option value="1">1</option>
+                      <option value="2">2</option>
+                      <option value="3">3</option>
+                      <option value="4">4</option>
+                      <option value="5">5</option>
+                      <option value="6">6</option>
+                      <option value="7">7</option>
+                      <option value="8">8</option>
+                      <option value="9">9</option>
+                      <option value="10">10</option>
+                    </select>
+                  </div>
+                  <p className="cart-subtotal">£{(product.price * product.quantity).toFixed(2)}</p>
+                </div>
+                <button onClick={() => removeFromCart(product.id)}>Remove</button>
+              </li>
+            </div>
           );
         })}
         <div>
-          <p className="cart-total">Total Price: £{totalPrice.toFixed(2)} </p>
+          <p className="cart-total">Total: £{totalPrice.toFixed(2)} </p>
           <button className="checkout-button" onClick={() => alert("Product Purchased")}>
             Checkout
           </button>

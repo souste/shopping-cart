@@ -57,9 +57,11 @@ function SingleProduct({ handleCartClick, quantity, setQuantity }) {
             >
               Add to Cart
             </button>
-            <button className="back-button">
-              <img src={backIcon} alt="back-button" />
-            </button>
+            <div className="back-button-container">
+              <button className="back-button">
+                <img src={backIcon} alt="back-button" />
+              </button>
+            </div>
           </Link>
         </div>
       </li>
