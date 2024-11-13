@@ -112,11 +112,11 @@ function ShopPage() {
                 displayProduct && (
                   <Link key={product.id} to={`/products/${product.id}`}>
                     <li className="product-container" key={product.id}>
-                      <p className="product-price">£{product.price.toFixed(2)}</p>
                       <img src={product.image} alt={product.title} />
                       <h3 className="products-title">
-                        {product.title.length > 65 ? `${product.title.substring(0, 65)}...` : product.title}
+                        {product.title.length > 20 ? `${product.title.substring(0, 20)}...` : product.title}
                       </h3>
+                      <p className="product-price">£{product.price.toFixed(2)}</p>
                     </li>
                   </Link>
                 )
