@@ -632,6 +632,8 @@ nav li.active {
   font-size: 10px;
 }
 
+/* Media Query */
+
 @media only screen and (max-width: 600px) {
   #site-title {
     font-size: 1.5rem;
@@ -753,11 +755,49 @@ nav li.active {
     flex-direction: column;
     padding-left: 15vw;
   }
+
+  /* .footer-top-email {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .email-subscribe-container {
+    display: flex;
+    flex-direction: column;
+  } */
+
+  .footer {
+    display: none;
+  }
+
+  .home-container {
+    display: flex;
+    align-items: center;
+  }
+
+  .home-page-banner-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 100px;
+  }
+
+  .home-page-banner {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 @media only screen and(max-width: 788px) {
   .shop-banner {
     width: 50vw;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .footer-top-email {
     display: flex;
     flex-direction: column;
   }

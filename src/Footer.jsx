@@ -9,7 +9,7 @@ function Footer() {
       <div className="footer-top-email">
         <h2>Become one of our members</h2>
         <p>Enjoy 10% off your next purchase when you sign up</p>
-        <div>
+        <div className="email-subscribe-container">
           <input type="email" className="subscribe-input" placeholder="Enter your email here" />
           <button className="subscribe-button">Subscribe</button>
         </div>
