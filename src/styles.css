@@ -142,7 +142,7 @@ nav li.active {
 
 .categories-container {
   margin-top: 0;
-  z-index: 99;
+  /* z-index: 99; */
 
 }
 
