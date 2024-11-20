@@ -1,13 +1,3 @@
-
-
-body {
-  height: 100%;
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  font-family: "Literata", sans-serif;
-}
-
 .app-container {
   display: flex;
   flex-direction: column;
@@ -143,7 +133,6 @@ nav li.active {
 .categories-container {
   margin-top: 0;
   /* z-index: 99; */
-
 }
 
 .categories-list {
@@ -472,10 +461,7 @@ nav li.active {
   flex-wrap: wrap;
   width: 100%;
   flex-wrap: wrap;
-  max-width: 12vw
-
-
-
+  max-width: 12vw;
 }
 
 .price-quantity-subtotal-container {
@@ -860,6 +846,7 @@ nav li.active {
 
   .product-price {
     margin-left: 0;
+  }
 }
 
 @media only screen and(max-width: 788px) {
